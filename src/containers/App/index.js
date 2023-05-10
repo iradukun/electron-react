@@ -1,21 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import SVG from 'react-inlinesvg'
 
 import logo from '../../../assets/logo.svg'
 import './App.css'
 
 function App() {
+  const [profiles, setProfiles] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [postId, setPostId] = useState('');
+  const handlePostSubmit = (id) => {
+    setPostId(id);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <SVG src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/containers/App/</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org">
-          Learn React
-        </a>
-      </header>
+     <h1>Facebook Commenter</h1>
+      <PostForm onSubmit={handlePostSubmit} />
+      <ProfileList profiles={profiles} setProfiles={setProfiles} />
+      <CommentList comments={comments} setComments={setComments} />
+      {/* TODO: Add component for selecting reaction */}
+      {/* TODO: Add button for starting comment process */}
     </div>
   )
 }

@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npm run start:react",
     "start:react": "cross-env NODE_ENV=dev webpack-dev-server --mode development --progress",
-    "start:electron": "ross-env NODE_ENV=dev electron .",
+    "start:electron": " NODE_ENV=dev electron .",
     "build": "webpack --mode production",
     "dist": "electron-builder",
     "package": "electron-forge package",
