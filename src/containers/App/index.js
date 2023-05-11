@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import SVG from 'react-inlinesvg'
-
-import logo from '../../../assets/logo.svg'
+import PostForm from '../components/PostForm';
+import ProfileList from '../components/ProfileList';
+import CommentList from '../components/CommentList';
 import './App.css'
 
 function App() {

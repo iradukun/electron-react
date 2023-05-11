@@ -1,8 +1,16 @@
-import React, {useState} from "react";
+import React from 'react';
 
+const CommentList = ({ comments }) => {
+  return (
+    <div>
+      {comments.map((comment, index) => (
+        <div key={index}>
+          <p>{comment.text}</p>
+          <p>Reacted with: {comment.reaction}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-const CommentList=()=>{
-    return(
-        <div className="thank-you"></div>
-    )
-}
+export default CommentList;
